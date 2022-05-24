@@ -1,0 +1,25 @@
+{
+	"name": "AzureSqlTable1_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tblName": {
+				"type": "string",
+				"defaultValue": "NYCTaxiData"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().tblName",
+				"type": "Expression"
+			}
+		}
+	}
+}
